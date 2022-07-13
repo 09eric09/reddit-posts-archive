@@ -7,11 +7,11 @@ function App() {
   useEffect(() => {
 
   const getPosts = () => {
-    fetch(`https://api.pushshift.io/reddit/search/submission/?author=dylbobbb`)
+    fetch(`https://api.pushshift.io/reddit/search/submission/?author=FlatAttention`)
     .then(res => res.json())
     .then((data)=> {
-      console.log(data);
-      setPosts(data);
+      console.log(data.data);
+      setPosts(data.data);
     })
   } 
 
